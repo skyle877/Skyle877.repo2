@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 4 - DOM básico</title>
+    <link rel="stylesheet" href="ej4.css" />
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      .btn {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        margin-bottom: 24px;
+        border: 2px solid rgb(36, 56, 58);
+        background-color: rgb(166, 202, 205);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Botón para volver a la página anterior -->
+    <button onclick="window.location.href='../index.html';" class="btn btn-light mb-5">
+      <i class="bi bi-arrow-left"></i> Back
+    </button>  
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+      vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+      commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+      vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+      aliquam vitae, ultrices porttitor, pede.
+      <!-- Inicio texto a mostrar/esconder -->
+      <!-- Añadir id al fragmento de texto para poder referenciarlo -->
+      <span class="additional hidden" id="additionalText">
+        Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna
+        sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis
+        eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante
+        quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing
+        elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae,
+        venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam
+        ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer
+        lacus. Vestibulum venenatis erat eu odio. Praesent id metus. Nullam sit
+        amet nisl elementum elit convallis malesuada. Phasellus magna sem,
+        semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu
+        adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam
+        non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae,
+        venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam
+        ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer
+        lacus. Vestibulum venenatis erat eu odio. Praesent id metus.
+      </span>
+      <!-- Fin texto a mostrar/esconder -->
+    </p>
+    <!-- Asignar el id del texto al enlace "seguir leyendo" -->
+    <a href="#" id="toggleLink">Seguir leyendo</a>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

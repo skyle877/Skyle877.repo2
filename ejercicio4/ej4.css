@@ -1,0 +1,11 @@
+.additional {
+  margin-top: 20px;
+}
+
+.additional.hidden {
+  display: none;
+}
+
+.additional.visible {
+  display: block;
+}

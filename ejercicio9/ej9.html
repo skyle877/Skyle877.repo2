@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ej 9: Cat Walk</title>
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      .btn {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        margin-bottom: 24px;
+        border: 2px solid rgb(36, 56, 58);
+        background-color: rgb(166, 202, 205);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Botón para volver a la página anterior -->
+    <button onclick="window.location.href='../index.html';" class="btn btn-light mb-5">
+      <i class="bi bi-arrow-left"></i> Back
+    </button>
+
+    <img
+      id="myCat"
+      style="position: absolute; left: 0px"
+      src="cat-walk.gif"
+    />
+    
+    <script>
+      const cat = document.getElementById('myCat');
+
+      /* Esta función mueve el gato hacia la derecha y resetea su posición al llegar al final.
+      
+      function walk() {
+        cat.style.left = parseInt(cat.style.left) + 10 + 'px';
+
+        const distanceWalked = parseInt(cat.style.left);
+        const windowWidth = window.innerWidth;
+
+        if (distanceWalked > windowWidth) {
+          cat.style.left = 0;
+        }
+      }
+      */
+
+      // Esta función mueve el gato hacia la derecha y, al llegar al final, lo hace caminar hacia atrás.
+      let direction = "right";
+      function walk() {
+        const catLeft = parseInt(cat.style.left);
+        const windowWidth = window.innerWidth;
+        const catWidth = cat.width;
+
+        if (direction === "right") {
+          cat.style.left = catLeft + 10 + 'px';
+          if (catLeft + catWidth > windowWidth) {
+            direction = "left";
+          }
+        } else {
+          cat.style.left = catLeft - 10 + 'px';
+          if (catLeft < 0) {
+            direction = "right";
+          }
+        }
+      }
+
+      setInterval(walk, 50);
+    </script>
+  </body>
+</html>

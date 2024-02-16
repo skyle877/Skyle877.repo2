@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 5 - DOM básico</title>
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      .btnBack {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        margin-bottom: 24px;
+        border: 2px solid rgb(36, 56, 58);
+        background-color: rgb(166, 202, 205);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Botón para volver a la página anterior -->
+    <button onclick="window.location.href='../index.html';" class="btn btn-light mb-5 btnBack">
+      <i class="bi bi-arrow-left"></i> Back
+    </button>
+
+    <ul id="lista">
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetuer adipiscing elit</li>
+      <li>Sed mattis enim vitae orci</li>
+      <li>Phasellus libero</li>
+      <li>Maecenas nisl arcu</li>
+    </ul>
+
+    <input type="button" value="Añadir elemento" id="addButton" class="btn btn-primary" />
+  </body>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>
